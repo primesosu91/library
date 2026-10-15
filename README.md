@@ -6,6 +6,7 @@
 ## DataStructure
 
 - [SegmentTree](libraries/DataStructure/SegmentTree.cpp)：点更新、点・区間取得、全区間取得、セグメント木上の二分探索に対応する汎用セグメント木。
+- [UnionFind](libraries/DataStructure/UnionFind.cpp)：集合の統合、連結判定、代表元・サイズ・集合数・所属要素一覧の取得に対応する素集合データ構造。
 
 ## Math
 
