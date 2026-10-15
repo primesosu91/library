@@ -11,6 +11,7 @@
 ## Math
 
 - [ModInt](libraries/Math/ModInt.cpp)：固定MODの四則演算、累乗、逆元、入出力に対応する整数型（逆元・除算は法と互いに素な値に限定）。
+- [Prime](libraries/Math/Prime.cpp)：素数判定・列挙・個数、素因数分解、約数、Eulerのφ関数、Möbius関数に対応。
 
 ## String
 
