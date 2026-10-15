@@ -11,6 +11,7 @@
 ## Graph
 
 - [Dijkstra](libraries/Graph/Dijkstra.cpp)：非負重みグラフの最短距離計算、頂点列・辺列の経路復元に対応。
+- [WarshallFloyd](libraries/Graph/WarshallFloyd.cpp)：全点対最短距離計算、負閉路の検出、頂点列・辺列の経路復元に対応。
 
 ## Math
 
