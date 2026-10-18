@@ -14,7 +14,7 @@
 
 - [Dijkstra](libraries/Graph/Dijkstra.cpp)：非負重みグラフの最短距離計算、頂点列・辺列の経路復元に対応。
 - [WarshallFloyd](libraries/Graph/WarshallFloyd.cpp)：全点対最短距離計算、負閉路の検出、頂点列・辺列の経路復元に対応。
-- [Doubling](libraries/Graph/Doubling.cpp)：関数グラフ上の繰り返し遷移を前計算し、指定回数遷移した先の頂点を高速取得（遷移終了にも対応）。
+- [Doubling](libraries/Graph/Doubling.cpp)：関数グラフ上の繰り返し遷移を高速取得。重みを指定すれば通過頂点の重みの和も取得可能（遷移終了に対応）。
 
 ## Math
 
