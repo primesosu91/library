@@ -17,6 +17,7 @@
 - [Doubling](libraries/Graph/Doubling.cpp)：関数グラフ上の繰り返し遷移を高速取得。重みを指定すれば通過頂点の重みの和も取得可能（遷移終了に対応）。
 - [CycleDetection](libraries/Graph/CycleDetection.cpp)：有向・無向グラフのサイクル検出、頂点列・辺列の復元に対応（自己ループ・多重辺を含む）。
 - [MaxFlow](libraries/Graph/MaxFlow.cpp)：Dinic法による最大流・最小カット計算、辺の流量取得・変更に対応。
+- [MinCostFlow](libraries/Graph/MinCostFlow.cpp)：ポテンシャル付き最短増加路法による最小費用流・費用曲線、流量の分割追加と辺の流量取得に対応。
 
 ## Math
 
