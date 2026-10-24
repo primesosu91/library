@@ -29,3 +29,7 @@
 ## String
 
 - [RunLengthEncoding](libraries/String/RunLengthEncoding.cpp)：文字列・配列のランレングス圧縮と復元を行う関数群。
+
+## Snippets
+
+- [cpp.code-snippets](snippets/cpp.code-snippets)：VS Code用のC++スニペット。競技用テンプレートと各ライブラリを収録。
