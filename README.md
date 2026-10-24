@@ -8,7 +8,7 @@
 - [SegmentTree](libraries/DataStructure/SegmentTree.cpp)：点更新、点・区間取得、全区間取得、セグメント木上の二分探索に対応する汎用セグメント木。
 - [LazySegmentTree](libraries/DataStructure/LazySegmentTree.cpp)：区間更新・点更新、点・区間・全区間取得、遅延伝播付き二分探索に対応する汎用遅延セグメント木。
 - [UnionFind](libraries/DataStructure/UnionFind.cpp)：集合の統合、連結判定、代表元・サイズ・集合数・所属要素一覧の取得に対応する素集合データ構造。
-- [IntervalSet](libraries/DataStructure/IntervalSet.cpp)：整数区間の追加・削除・統合・分割、包含判定、mex・被覆整数数の取得に対応する区間集合。
+- [IntervalSet](libraries/DataStructure/IntervalSet.cpp)：整数区間の追加・削除・統合・分割、包含判定、mex・全体および指定範囲の被覆整数数、登録区間との共通部分・未登録区間の取得に対応する区間集合。
 
 ## Graph
 
