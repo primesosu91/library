@@ -16,7 +16,7 @@
 - [WarshallFloyd](libraries/Graph/WarshallFloyd.cpp)：全点対最短距離計算、負閉路の検出、頂点列・辺列の経路復元に対応。
 - [Doubling](libraries/Graph/Doubling.cpp)：関数グラフ上の繰り返し遷移を高速取得。重みを指定すれば通過頂点の重みの和も取得可能（遷移終了に対応）。
 - [CycleDetection](libraries/Graph/CycleDetection.cpp)：有向・無向グラフのサイクル検出、頂点列・辺列の復元に対応（自己ループ・多重辺を含む）。
-- [FunctionalGraph](libraries/Graph/FunctionalGraph.cpp)：出次数1の有向グラフを線形時間でサイクル・成分に分解し、到達サイクル、長さ、距離、入口を取得。
+- [FunctionalGraph](libraries/Graph/FunctionalGraph.cpp)：出次数1の有向グラフを線形時間でサイクル・成分に分解し、到達サイクル・入口・距離、頂点間の到達判定・最短遷移回数・到達可能頂点数を取得。
 - [MaxFlow](libraries/Graph/MaxFlow.cpp)：Dinic法による最大流・最小カット計算、辺の流量取得・変更に対応。
 - [MinCostFlow](libraries/Graph/MinCostFlow.cpp)：ポテンシャル付き最短増加路法による最小費用流・費用曲線、流量の分割追加と辺の流量取得に対応。
 - [ProjectSelection](libraries/Graph/ProjectSelection.cpp)：二択の利益最大化を最小カットへ帰着。単項・二項利益、全一致ボーナス、禁止状態、解の復元と実行可能性判定に対応。
