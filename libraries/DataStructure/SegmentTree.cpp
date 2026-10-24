@@ -15,6 +15,7 @@ private:
 
 public:
     // 初期化: SegmentTree(要素数) -> 全要素を e() に設定
+    // 前提: 要素数 >= 0、op は結合則を満たし、e() は op の単位元
     SegmentTree(int element_count) : n(element_count), size(1) {
         assert(element_count >= 0);
 
@@ -23,6 +24,7 @@ public:
     }
 
     // 初期化: SegmentTree(初期配列) -> 配列の値を使って構築
+    // 使用例 (区間和): op(a,b)=a+b、e()=0 と定義し、SegmentTree<long long, op, e> seg(v); seg.prod(0, v.size());
     SegmentTree(const vector<S>& v) : SegmentTree((int)v.size()) {
         // 葉に初期値を配置し、下から親を構築
         for (int i = 0; i < n; i++) {

@@ -15,7 +15,7 @@ private:
         data[k] = op(data[2 * k], data[2 * k + 1]);
     }
 
-    // ノードに操作を適用し、内部ノードには遅延操作を合成
+    // ノードに f を適用し、内部ノードの未伝播操作 g を composition(f, g) で更新 (g の後に f を適用)
     void all_apply(int k, F f) {
         data[k] = mapping(f, data[k]);
         if (k < size) lazy[k] = composition(f, lazy[k]);
@@ -32,7 +32,9 @@ public:
     // 初期化: LazySegmentTree() -> 長さ0の配列を構築
     LazySegmentTree() : LazySegmentTree(0) {}
 
-    // 初期化: LazySegmentTree(要素数) -> 全要素を e() に設定（要素数 >= 0）
+    // 初期化: LazySegmentTree(要素数) -> 全要素を e() に設定 (前提: 要素数 >= 0)
+    // op は結合則を満たし e() は単位元、mapping は op と両立し、composition は作用の合成、id() は恒等操作
+    // 区間和で S に区間長を持たせる場合、e() の長さは 0 なので、長さ 1 の要素を初期値とするには配列から構築する
     LazySegmentTree(int element_count) : n(element_count), size(1), log(0) {
         assert(element_count >= 0);
 
@@ -45,6 +47,9 @@ public:
     }
 
     // 初期化: LazySegmentTree(初期配列) -> 配列の値から構築
+    // 使用例 (区間加算・区間和): S={sum,len}、F=long long、op は成分ごとの和、e()={0,0}
+    // mapping(f,x)={x.sum+f*x.len,x.len}、composition(f,g)=f+g、id()=0
+    // vector<S> v(n, S{0,1}); LazySegmentTree<S,op,e,F,mapping,composition,id> seg(v); seg.apply(0,n,5); seg.prod(0,n).sum;
     LazySegmentTree(const vector<S>& v) : LazySegmentTree((int)v.size()) {
         // 葉に初期値を配置し、下から親を構築
         for (int i = 0; i < n; i++) {

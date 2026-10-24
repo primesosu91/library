@@ -137,22 +137,24 @@ public:
         return id;
     }
 
-    // 追加最小費用最大流: flow(s, t) -> 今回追加した {流量, 最小費用} (前提: s != t、以後も同じ s, t)
+    // 追加最小費用最大流: flow(s, t) -> 現在の残余グラフから追加した {流量, 追加費用} (前提: s != t、以後も同じ s, t)
     pair<Cap, Cost> flow(int s, int t) {
         return flow(s, t, numeric_limits<Cap>::max());
     }
 
-    // 流量制限付き: flow(s, t, limit) -> limit 以下で追加できた {最大流量, 最小費用} (前提: limit >= 0、同じ s, t)
+    // 流量制限付き: flow(s, t, limit) -> limit 以下で今回追加した {流量, 追加費用} (前提: limit >= 0、同じ s, t)
     pair<Cap, Cost> flow(int s, int t, Cap limit) {
         return run(s, t, limit, nullptr);
     }
 
-    // 費用曲線: slope(s, t) -> 現状態からの追加流量と最小費用の折れ線頂点 (前提: 同じ s, t)
+    // 追加費用曲線: slope(s, t) -> 現在の残余グラフから追加可能な流量と追加費用の折れ線頂点 (前提: 同じ s, t)
+    // 対応する流量を実際に追加し、返り値は今回の追加分のみを表す
     vector<pair<Cap, Cost>> slope(int s, int t) {
         return slope(s, t, numeric_limits<Cap>::max());
     }
 
-    // 流量制限付き費用曲線: slope(s, t, limit) -> {0,0} を含む折れ線頂点 (前提: limit >= 0、同じ s, t)
+    // 流量制限付き費用曲線: slope(s, t, limit) -> {0,0} から始まる今回の追加流量と追加費用の折れ線頂点
+    // 前提: limit >= 0、同じ s, t。例: flow(s,t,2) の後の slope(s,t,3) は、さらに最大3流す分のみを返す
     vector<pair<Cap, Cost>> slope(int s, int t, Cap limit) {
         vector<pair<Cap, Cost>> result;
         run(s, t, limit, &result);

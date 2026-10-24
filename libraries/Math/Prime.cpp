@@ -167,6 +167,8 @@ public:
     }
 
     // 区間素数列挙: enumerate(l, r) -> [l, r) の素数 (前提: 0 <= l <= r)
+    // r-1 <= N なら前計算済み素数列を使用、N >= 2 かつ N*N >= r-1 なら分割区間篩、それ以外は各候補を素数判定
+    // 前計算が不足する広い区間では Miller-Rabin 判定を繰り返すため、処理時間が大きくなる
     vector<long long> enumerate(long long l, long long r) const {
         assert(0 <= l && l <= r);
         vector<long long> result;

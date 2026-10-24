@@ -56,7 +56,8 @@ public:
         return id;
     }
 
-    // 最短路計算: build(s) -> 始点 s から全頂点への最短距離と復元情報を構築 (前提: 0 <= s < n)
+    // 最短路計算: build(s) -> 始点 s から全頂点への最短距離と復元情報を構築
+    // 前提: 0 <= s < n、各辺の重みが非負かつ inf 未満、必要な最短距離も inf 未満
     void build(int s) {
         assert(0 <= s && s < n);
         source = s;
@@ -83,7 +84,7 @@ public:
         }
     }
 
-    // 最短距離: dist(v) -> 始点から v への距離 (到達不能なら inf、前提: build 済み、0 <= v < n)
+    // 最短距離: dist(v) -> 始点から v への距離 (到達不能または最短距離が inf 以上なら inf、前提: build 済み、0 <= v < n)
     T dist(int v) const {
         assert(source != -1 && 0 <= v && v < n);
         return distance[v];
@@ -95,13 +96,13 @@ public:
         return distance;
     }
 
-    // 到達判定: reachable(v) -> 始点から v に到達可能なら true (前提: build 済み、0 <= v < n)
+    // 到達判定: reachable(v) -> 始点から v への最短距離が inf 未満なら true (前提: build 済み、0 <= v < n)
     bool reachable(int v) const {
         assert(source != -1 && 0 <= v && v < n);
         return distance[v] != inf;
     }
 
-    // 頂点列復元: path(v) -> 始点から v までの頂点列 (到達不能なら空、前提: build 済み、0 <= v < n)
+    // 頂点列復元: path(v) -> 始点から v までの頂点列 (最短距離が inf 以上なら空、前提: build 済み、0 <= v < n)
     vector<int> path(int v) const {
         assert(source != -1 && 0 <= v && v < n);
         if (!reachable(v)) return {};
@@ -114,7 +115,7 @@ public:
         return result;
     }
 
-    // 辺列復元: edge_path(v) -> 始点から v までの辺列 (到達不能・始点自身なら空、前提: build 済み、0 <= v < n)
+    // 辺列復元: edge_path(v) -> 始点から v までの辺列 (最短距離が inf 以上・始点自身なら空、前提: build 済み、0 <= v < n)
     vector<Edge> edge_path(int v) const {
         assert(source != -1 && 0 <= v && v < n);
         if (!reachable(v)) return {};

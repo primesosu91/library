@@ -193,13 +193,13 @@ public:
         if (!v1) add_hard_edge(i, SINK);
     }
 
-    // 二項利益: add_pairwise(i, j, v00, v01, v10, v11) -> 状態ごとの利益
-    // 前提: i != j、許容状態の組合せが最小カットで表現可能 (nullopt は禁止状態)
+    // 二項利益: add_pairwise(i, j, v00, v01, v10, v11) -> (i, j) の各状態に対応する利益 (nullopt は禁止状態)
+    // 前提: i != j、4状態すべてを許容する場合は v00 + v11 >= v01 + v10
     void add_pairwise(int i, int j, optional<T> v00, optional<T> v01,
                       optional<T> v10, optional<T> v11) {
         assert(valid(i) && valid(j) && i != j);
         bool f00 = !v00, f01 = !v01, f10 = !v10, f11 = !v11;
-        // 00/11 の禁止は、01 または 10 も禁止する場合のみ表現できる
+        // 00 または 11 を禁止する場合は、01 または 10 の少なくとも一方も禁止する
         assert((!f00 || f01 || f10) && (!f11 || f01 || f10));
 
         Wide a = Wide(v00.value_or(0));

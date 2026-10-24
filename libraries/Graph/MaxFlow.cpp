@@ -152,7 +152,8 @@ public:
         return result;
     }
 
-    // 最小カット側の頂点判定: min_cut(s) -> 残余グラフで s から到達可能な頂点 (前提: s が有効)
+    // 最小カット側の頂点判定: min_cut(s) -> 残余グラフで s から到達可能な頂点
+    // 前提: s が有効。s-t 最小カットとして使う場合は最大流を流し切る必要がある (流量制限付き flow の途中では t を含む場合がある)
     vector<bool> min_cut(int s) const {
         assert(0 <= s && s < n);
         vector<bool> visited(n, false);
