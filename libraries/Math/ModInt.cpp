@@ -15,13 +15,11 @@ public:
     // 初期化: ModInt(x) -> 整数 x を [0, MOD) に正規化
     template<class T, enable_if_t<is_integral_v<T>, int> = 0>
     ModInt(T x) {
+        auto y = x % MOD;
         if constexpr (is_signed_v<T>) {
-            long long y = (long long)x % MOD;
             if (y < 0) y += MOD;
-            value = (int)y;
-        } else {
-            value = (int)((unsigned long long)x % (unsigned int)MOD);
         }
+        value = (int)y;
     }
 
     // 値取得: val() -> [0, MOD) の整数
