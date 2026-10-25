@@ -30,6 +30,10 @@
 
 - [RunLengthEncoding](libraries/String/RunLengthEncoding.cpp)：文字列・配列のランレングス圧縮と復元を行う関数群。
 
+## Geometry
+
+- [ArgumentSort](libraries/Geometry/ArgumentSort.cpp)：整数座標の偏角ソート、任意の基準点からの比較、外積の符号判定に対応。
+
 ## Snippets
 
 - [cpp.code-snippets](snippets/cpp.code-snippets)：VS Code用のC++スニペット。競技用テンプレートと各ライブラリを収録。
