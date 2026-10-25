@@ -9,6 +9,7 @@
 - [LazySegmentTree](libraries/DataStructure/LazySegmentTree.cpp)：区間更新・点更新、点・区間・全区間取得、遅延伝播付き二分探索に対応する汎用遅延セグメント木。
 - [UnionFind](libraries/DataStructure/UnionFind.cpp)：集合の統合、連結判定、代表元・サイズ・集合数・所属要素一覧の取得に対応する素集合データ構造。
 - [IntervalSet](libraries/DataStructure/IntervalSet.cpp)：整数区間の追加・削除・統合・分割、包含判定、mex・全体および指定範囲の被覆整数数、登録区間との共通部分・未登録区間の取得に対応する区間集合。
+- [FenwickTree](libraries/DataStructure/FenwickTree.cpp)：点加算・点代入・点取得・累積和・区間和・累積和に基づく二分探索に対応するFenwick Tree。
 
 ## Graph
 
