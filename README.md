@@ -40,6 +40,7 @@
 ## Other
 
 - [CoordinateCompression](libraries/Other/CoordinateCompression.cpp)：静的座標圧縮、値と圧縮座標の相互変換、配列圧縮、未登録値を含む二分探索に対応。
+- [LIS](libraries/Other/LIS.cpp)：最長増加部分列（狭義・広義）の長さ、値列・添字列の復元、各位置で終わる最長長さの取得に対応。
 
 ## Snippets
 
