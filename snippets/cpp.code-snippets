@@ -30,7 +30,7 @@
             "template <class T> bool chmin(T& a, const T& b) { if (a > b) { a = b; return true; } return false; }",
             "",
             "void solve() {",
-            "   $0",
+            "    $0",
             "}",
             "",
             "int main() {",
