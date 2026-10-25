@@ -25,6 +25,7 @@
 
 - [ModInt](libraries/Math/ModInt.cpp)：固定MODの四則演算、累乗、逆元、入出力に対応する整数型（逆元・除算は法と互いに素な値に限定）。
 - [Prime](libraries/Math/Prime.cpp)：素数判定・列挙・個数、素因数分解、約数、Eulerのφ関数、Möbius関数に対応。φ・Möbius関数・約数個数の一括計算にも対応。
+- [Combination](libraries/Math/Combination.cpp)：素数MODでの組合せ・順列・重複組合せ、階乗・逆階乗・逆元。前計算範囲外の乗算方式、Lucasの定理、MOD直前の最適化に対応。
 
 ## String
 
