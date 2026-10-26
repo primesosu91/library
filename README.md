@@ -21,6 +21,7 @@
 - [CycleDetection](libraries/Graph/CycleDetection.cpp)：有向・無向グラフのサイクル検出、頂点列・辺列の復元に対応（自己ループ・多重辺を含む）。
 - [FunctionalGraph](libraries/Graph/FunctionalGraph.cpp)：出次数1の有向グラフを線形時間でサイクル・成分に分解し、到達サイクル・入口・距離、頂点間の到達判定・最短遷移回数・到達可能頂点数を取得。
 - [SCC](libraries/Graph/SCC.cpp)：非再帰の強連結成分分解、トポロジカル順の成分ID・成分頂点列・縮約DAGの取得に対応。
+- [TopologicalSort](libraries/Graph/TopologicalSort.cpp)：有向グラフのトポロジカルソート、辞書順最小の順序取得、閉路判定に対応。
 - [MaxFlow](libraries/Graph/MaxFlow.cpp)：Dinic法による最大流・最小カット計算、辺の流量取得・変更に対応。
 - [MinCostFlow](libraries/Graph/MinCostFlow.cpp)：ポテンシャル付き最短増加路法による最小費用流・費用曲線、流量の分割追加と辺の流量取得に対応。
 - [ProjectSelection](libraries/Graph/ProjectSelection.cpp)：二択の利益最大化を最小カットへ帰着。単項・二項利益、全一致ボーナス、禁止状態、解の復元と実行可能性判定に対応。
