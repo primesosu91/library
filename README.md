@@ -14,6 +14,7 @@
 
 ## Graph
 
+- [MinimumSpanningTree](libraries/Graph/MinimumSpanningTree.cpp)：整数・浮動小数点の重みに対応し、Kruskal法で最小全域木・最小全域森を構築。総コスト・採用辺・連結成分数を取得可能。
 - [Dijkstra](libraries/Graph/Dijkstra.cpp)：非負重みグラフの最短距離計算、頂点列・辺列の経路復元に対応。
 - [BFS](libraries/Graph/BFS.cpp)：単一始点・多点始点の幅優先探索、最短距離計算、頂点列・辺列の経路復元に対応。
 - [WarshallFloyd](libraries/Graph/WarshallFloyd.cpp)：全点対最短距離計算、負閉路の検出、頂点列・辺列の経路復元に対応。
