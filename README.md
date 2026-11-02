@@ -26,6 +26,10 @@
 - [MinCostFlow](libraries/Graph/MinCostFlow.cpp)：ポテンシャル付き最短増加路法による最小費用流・費用曲線、流量の分割追加と辺の流量取得に対応。
 - [ProjectSelection](libraries/Graph/ProjectSelection.cpp)：二択の利益最大化を最小カットへ帰着。単項・二項利益、全一致ボーナス、禁止状態、解の復元と実行可能性判定に対応。
 
+## Tree
+
+- [LCA](libraries/Tree/LCA.cpp)：ダブリングによる最小共通祖先、頂点間の距離・深さ・指定個数上の祖先の取得に対応。任意の根で再構築可能。
+
 ## Math
 
 - [ModInt](libraries/Math/ModInt.cpp)：固定MODの四則演算、累乗、逆元、入出力に対応する整数型（逆元・除算は法と互いに素な値に限定）。
