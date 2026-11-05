@@ -40,6 +40,7 @@
 
 ## String
 
+- [ZAlgorithm](libraries/String/ZAlgorithm.cpp)：文字列・配列の先頭と各位置からの最長一致長を線形時間で求めるZアルゴリズム。
 - [RunLengthEncoding](libraries/String/RunLengthEncoding.cpp)：文字列・配列のランレングス圧縮と復元を行う関数群。
 
 ## Geometry
