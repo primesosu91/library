@@ -30,6 +30,7 @@
 ## Tree
 
 - [LCA](libraries/Tree/LCA.cpp)：ダブリングによる最小共通祖先、頂点間の距離・深さ・指定個数上の祖先の取得に対応。任意の根で再構築可能。
+- [TreeDiameter](libraries/Tree/TreeDiameter.cpp)：重みなし・非負整数重み付きの木の直径を非再帰で計算し、長さ・両端・頂点列の取得に対応。
 
 ## Math
 
