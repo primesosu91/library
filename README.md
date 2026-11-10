@@ -38,6 +38,8 @@
 - [Combination](libraries/Math/Combination.cpp)：素数MODでの組合せ・順列・重複組合せ、階乗・逆階乗・逆元。前計算範囲外の乗算方式、Lucasの定理、MOD直前の最適化に対応。
 - [BaseConversion](libraries/Math/BaseConversion.cpp)：非負整数とN進法の桁列・文字列の相互変換（文字列は2〜36進法、大文字・小文字の入力に対応）。
 
+- [Matrix](libraries/Math/Matrix.cpp)：任意の要素型による長方形行列の加減算・乗算、単位行列、正方行列の非負整数累乗に対応。
+
 ## String
 
 - [ZAlgorithm](libraries/String/ZAlgorithm.cpp)：文字列・配列の先頭と各位置からの最長一致長を線形時間で求めるZアルゴリズム。
