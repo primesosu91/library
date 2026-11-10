@@ -40,6 +40,8 @@
 
 - [Matrix](libraries/Math/Matrix.cpp)：任意の要素型による長方形行列の加減算・乗算、単位行列、正方行列の非負整数累乗に対応。
 
+- [XorBasis](libraries/Math/XorBasis.cpp)：64ビット非負整数のXOR基底。値の追加、ランク、部分集合XORの表現可能判定、初期値とのXORの最大・最小値、基底取得、作れるXOR値の全列挙に対応（全列挙は指数時間・領域）。
+
 ## String
 
 - [ZAlgorithm](libraries/String/ZAlgorithm.cpp)：文字列・配列の先頭と各位置からの最長一致長を線形時間で求めるZアルゴリズム。
