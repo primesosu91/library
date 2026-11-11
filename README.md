@@ -45,6 +45,7 @@
 
 ## String
 
+- [Trie](libraries/String/Trie.cpp)：文字列の重複登録・1件削除・完全一致検索・接頭辞件数・最長共通接頭辞長の取得に対応するTrie木。
 - [ZAlgorithm](libraries/String/ZAlgorithm.cpp)：文字列・配列の先頭と各位置からの最長一致長を線形時間で求めるZアルゴリズム。
 - [RunLengthEncoding](libraries/String/RunLengthEncoding.cpp)：文字列・配列のランレングス圧縮と復元を行う関数群。
 
