@@ -4,6 +4,7 @@
         "body": [
             "// https://github.com/primesosu91/library",
             "#include <bits/stdc++.h>",
+            "#include <cassert>",
             "using namespace std;",
             "using ll = long long;",
             "using ld = long double;",
@@ -46,7 +47,6 @@
     "SegmentTree": {
         "prefix": "!SegmentTree",
         "body": [
-            "",
             "template<class S, S (*op)(S, S), S (*e)()>",
             "struct SegmentTree {",
             "private:",
@@ -187,7 +187,6 @@
     "ModInt": {
         "prefix": "!ModInt",
         "body": [
-            "",
             "template<int MOD>",
             "struct ModInt {",
             "    static_assert(MOD >= 2, \"MOD must be at least 2\");",
@@ -341,7 +340,6 @@
     "RunLengthEncoding": {
         "prefix": "!RunLengthEncoding",
         "body": [
-            "",
             "// 配列をランレングス圧縮: 連続する等しい要素を {値, 個数} に変換",
             "// 引数: v は元の配列 (前提: v.size() <= INT_MAX、T は等値比較・コピー可能)",
             "// 戻り値: 圧縮結果を元の順序で並べた vector<pair<T, int>>",
@@ -421,7 +419,6 @@
     "UnionFind": {
         "prefix": "!UnionFind",
         "body": [
-            "",
             "struct UnionFind {",
             "private:",
             "    int n;",
@@ -520,7 +517,6 @@
     "Prime": {
         "prefix": "!Prime",
         "body": [
-            "",
             "struct Prime {",
             "private:",
             "    using u64 = unsigned long long;",
@@ -885,7 +881,6 @@
     "Dijkstra": {
         "prefix": "!Dijkstra",
         "body": [
-            "",
             "template<class T = long long>",
             "struct Dijkstra {",
             "    static_assert(is_arithmetic_v<T> && !is_same_v<T, bool>, \"T must be a numeric type\");",
@@ -1018,7 +1013,6 @@
     "WarshallFloyd": {
         "prefix": "!WarshallFloyd",
         "body": [
-            "",
             "template<class T = long long>",
             "struct WarshallFloyd {",
             "    static_assert(is_arithmetic_v<T> && is_signed_v<T>, \"T must be a signed numeric type\");",
@@ -1189,7 +1183,6 @@
     "LazySegmentTree": {
         "prefix": "!LazySegmentTree",
         "body": [
-            "",
             "template<class S, S (*op)(S, S), S (*e)(), class F, S (*mapping)(F, S), F (*composition)(F, F), F (*id)()>",
             "struct LazySegmentTree {",
             "private:",
@@ -1404,7 +1397,6 @@
     "IntervalSet": {
         "prefix": "!IntervalSet",
         "body": [
-            "",
             "struct IntervalSet {",
             "private:",
             "    set<pair<long long, long long>> data;",
@@ -1598,7 +1590,6 @@
     "Doubling": {
         "prefix": "!Doubling",
         "body": [
-            "",
             "struct Doubling {",
             "private:",
             "    int n;",
@@ -1721,7 +1712,6 @@
     "CycleDetection": {
         "prefix": "!CycleDetection",
         "body": [
-            "",
             "struct CycleDetection {",
             "public:",
             "    struct Edge {",
@@ -1836,7 +1826,6 @@
     "MaxFlow": {
         "prefix": "!MaxFlow",
         "body": [
-            "",
             "template<class T = long long>",
             "struct MaxFlow {",
             "    static_assert(is_integral_v<T> && !is_same_v<T, bool>, \"T must be an integer type\");",
@@ -2025,7 +2014,6 @@
     "MinCostFlow": {
         "prefix": "!MinCostFlow",
         "body": [
-            "",
             "template<class Cap = long long, class Cost = long long>",
             "struct MinCostFlow {",
             "    static_assert(is_integral_v<Cap> && !is_same_v<Cap, bool>, \"Cap must be an integer type\");",
@@ -2209,7 +2197,6 @@
     "ProjectSelection": {
         "prefix": "!ProjectSelection",
         "body": [
-            "",
             "template<class T = long long>",
             "struct ProjectSelection {",
             "    static_assert(is_integral_v<T> && is_signed_v<T> && sizeof(T) <= 8,",
@@ -2495,7 +2482,6 @@
     "FunctionalGraph": {
         "prefix": "!FunctionalGraph",
         "body": [
-            "",
             "struct FunctionalGraph {",
             "private:",
             "    int n;",
@@ -2711,7 +2697,6 @@
     "ArgumentSort": {
         "prefix": "!ArgumentSort",
         "body": [
-            "",
             "// 外積の符号: cross_sign(a, b) -> a x b の符号 (-1, 0, 1)",
             "// 前提: T は 64-bit 以下の符号付き整数型",
             "// 正なら a から b は反時計回り、負なら時計回り、0 なら平行",
@@ -2783,7 +2768,6 @@
     "Combination": {
         "prefix": "!Combination",
         "body": [
-            "",
             "template<class Mint>",
             "struct Combination {",
             "private:",
@@ -2930,7 +2914,6 @@
     "FenwickTree": {
         "prefix": "!FenwickTree",
         "body": [
-            "",
             "template<class T>",
             "struct FenwickTree {",
             "private:",
@@ -3015,7 +2998,6 @@
     "PrefixSum": {
         "prefix": "!PrefixSum",
         "body": [
-            "",
             "template<class T>",
             "struct PrefixSum {",
             "private:",
@@ -3055,7 +3037,6 @@
     "CoordinateCompression": {
         "prefix": "!CoordinateCompression",
         "body": [
-            "",
             "template<class T>",
             "struct CoordinateCompression {",
             "private:",
@@ -3111,7 +3092,6 @@
     "LIS": {
         "prefix": "!LIS",
         "body": [
-            "",
             "template<class T>",
             "struct LIS {",
             "private:",
@@ -3189,7 +3169,6 @@
     "BFS": {
         "prefix": "!BFS",
         "body": [
-            "",
             "struct BFS {",
             "public:",
             "    struct Edge {",
@@ -3322,7 +3301,6 @@
     "SCC": {
         "prefix": "!SCC",
         "body": [
-            "",
             "struct SCC {",
             "private:",
             "    int n;",
@@ -3455,7 +3433,6 @@
     "TopologicalSort": {
         "prefix": "!TopologicalSort",
         "body": [
-            "",
             "struct TopologicalSort {",
             "private:",
             "    int n;",
@@ -3546,7 +3523,6 @@
     "LCA": {
         "prefix": "!LCA",
         "body": [
-            "",
             "// 重みなしの木のLCA: 前計算・メモリ O(n log n)、照会 O(log n)、depth は O(1)",
             "struct LCA {",
             "private:",
@@ -3654,7 +3630,6 @@
     "MinimumSpanningTree": {
         "prefix": "!MinimumSpanningTree",
         "body": [
-            "",
             "// Kruskal法: 構築 O(n + m log(m + 1))、メモリ O(n + m)",
             "// T は bool 以外の整数型・浮動小数点型。浮動小数点の比較に許容誤差は設けない",
             "template<class T = long long>",
@@ -3765,7 +3740,6 @@
     "BaseConversion": {
         "prefix": "!BaseConversion",
         "body": [
-            "",
             "// 非負整数を base 進法の上位桁からの桁列へ変換。0 は {0} を返す",
             "// 引数: n は変換する整数、base は基数 (前提: n >= 0、2 <= base <= INT_MAX)",
             "// 桁数 k に対して時間 O(k)、返り値を含む追加領域 O(k)",
@@ -3839,7 +3813,6 @@
     "ZAlgorithm": {
         "prefix": "!ZAlgorithm",
         "body": [
-            "",
             "// 配列のZ配列: z[i] は v の先頭と位置 i からの最長一致長 (0-index)",
             "// 引数: v は元の配列 (前提: v.size() <= INT_MAX、== は等値関係を表す)",
             "// 戻り値: 空入力なら空、それ以外は z[0] = v.size()",
@@ -3881,7 +3854,6 @@
     "Matrix": {
         "prefix": "!Matrix",
         "body": [
-            "",
             "// Tは0・1から構築でき、使用する演算に応じて加算・減算・乗算が可能であること。",
             "// 演算の中間値がTの範囲内に収まること。添字は0-index。",
             "template<class T>",
@@ -4010,7 +3982,6 @@
     "XorBasis": {
         "prefix": "!XorBasis",
         "body": [
-            "",
             "// 非負整数を64ビットのベクトルとして扱うXOR基底。空集合のXORは0。",
             "// W = 64として、rank()はO(1)、values()以外の操作はO(W)、内部領域はO(W)。",
             "// 元要素の選択復元・追加回数・部分集合の選び方の数は保持しない。",
@@ -4102,7 +4073,6 @@
     "TreeDiameter": {
         "prefix": "!TreeDiameter",
         "body": [
-            "",
             "// 非負整数重みの木の直径: build・メモリ O(n)、長さ・両端取得 O(1)、経路取得 O(経路長)",
             "// 距離の合計は long long の範囲内。直径が複数ある場合はそのうち1つを返す。",
             "struct TreeDiameter {",
@@ -4197,7 +4167,6 @@
     "Trie": {
         "prefix": "!Trie",
         "body": [
-            "",
             "// 連続するバイト値 [base, base + alphabet_size) を扱う文字列の多重集合。",
             "// 文字列長・登録総数・作成済みノード数は int の範囲内。空文字列も登録可能。",
             "// L = 文字列長、σ = alphabet_size、V = 作成済みノード数として、",
