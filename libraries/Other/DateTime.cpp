@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 // 年は1〜9999。各APIの時間・追加領域はO(1)。
 // うるう年判定: year がグレゴリオ暦のうるう年ならtrue。
 bool is_leap_year(int year) {
