@@ -168,6 +168,8 @@ public:
 
     // 区間素数列挙: enumerate(l, r) -> [l, r) の素数 (前提: 0 <= l <= r)
     // r-1 <= N なら前計算済み素数列を使用、N >= 2 かつ N*N >= r-1 なら分割区間篩、それ以外は各候補を素数判定
+    // 広い区間では N >= max(2, ceil(sqrt(r-1))) を目安に前計算する（r >= 2）。
+    // 例: Prime prime(1000000); prime.enumerate(999999000000LL, 1000000000000LL);
     // 前計算が不足する広い区間では Miller-Rabin 判定を繰り返すため、処理時間が大きくなる
     vector<long long> enumerate(long long l, long long r) const {
         assert(0 <= l && l <= r);
@@ -244,12 +246,25 @@ public:
     }
 
     // 素因数分解: factorize(n) -> {素因数, 指数} を昇順で返す (前提: n >= 1、n=1 では空)
+    // n <= N なら最小素因数から直接まとめ、時間 O(log n)、結果以外の追加領域 O(1)。
     vector<pair<long long, int>> factorize(long long n) const {
         assert(n >= 1);
+        vector<pair<long long, int>> result;
+        if (n <= limit) {
+            // 最小素因数を順に取り出すため、ソートは不要。
+            while (n > 1) {
+                int p = spf[(int)n], exponent = 0;
+                do {
+                    n /= p;
+                    exponent++;
+                } while (n > 1 && spf[(int)n] == p);
+                result.emplace_back(p, exponent);
+            }
+            return result;
+        }
         vector<u64> factors;
         factor_rec((u64)n, factors);
         sort(factors.begin(), factors.end());
-        vector<pair<long long, int>> result;
         for (u64 p : factors) {
             if (result.empty() || result.back().first != (long long)p) result.emplace_back((long long)p, 1);
             else result.back().second++;
