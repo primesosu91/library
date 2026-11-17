@@ -38,6 +38,7 @@
 - [Prime](libraries/Math/Prime.cpp)：素数判定・列挙・個数、素因数分解、約数、Eulerのφ関数、Möbius関数に対応。φ・Möbius関数・約数個数の一括計算にも対応。
 - [Combination](libraries/Math/Combination.cpp)：素数MODでの組合せ・順列・重複組合せ、階乗・逆階乗・逆元。前計算範囲外の乗算方式、Lucasの定理、MOD直前の最適化に対応。
 - [Convolution](libraries/Math/Convolution.cpp)：法998244353の畳み込み・多項式乗算。短い入力は直接計算、それ以外はNTTを使用。結果長は2^23以下。利用者が指定するModInt型で動作。
+- [FPS](libraries/Math/FPS.cpp)：法998244353の形式的冪級数。基本演算・逆元・微分・積分・対数・指数・非負整数乗に対応。ModInt型とConvolutionを併用。inv/log/exp/powの指定項数は2^22以下。
 - [BaseConversion](libraries/Math/BaseConversion.cpp)：非負整数とN進法の桁列・文字列の相互変換（文字列は2〜36進法、大文字・小文字の入力に対応）。
 
 - [Matrix](libraries/Math/Matrix.cpp)：任意の要素型による長方形行列の加減算・乗算、単位行列、正方行列の非負整数累乗に対応。
